@@ -83,38 +83,38 @@ export default function Tabovi() {
         shareCount: 12,
       },
     ],
-    Plovila: [
-      {
-        id: 1,
-        title: "Ask Me Anything: 10 answers to your questions about coffee",
-        date: "2d ago",
-        commentCount: 9,
-        shareCount: 5,
-      },
-      {
-        id: 2,
-        title: "The worst advice we've ever heard about coffee",
-        date: "4d ago",
-        commentCount: 1,
-        shareCount: 2,
-      },
-    ],
-    Komercijalna: [
-      {
-        id: 1,
-        title: "Ask Me Anything: 10 answers to your questions about coffee",
-        date: "2d ago",
-        commentCount: 9,
-        shareCount: 5,
-      },
-      {
-        id: 2,
-        title: "The worst advice we've ever heard about coffee",
-        date: "4d ago",
-        commentCount: 1,
-        shareCount: 2,
-      },
-    ],
+    // Plovila: [
+    //   {
+    //     id: 1,
+    //     title: "Ask Me Anything: 10 answers to your questions about coffee",
+    //     date: "2d ago",
+    //     commentCount: 9,
+    //     shareCount: 5,
+    //   },
+    //   {
+    //     id: 2,
+    //     title: "The worst advice we've ever heard about coffee",
+    //     date: "4d ago",
+    //     commentCount: 1,
+    //     shareCount: 2,
+    //   },
+    // ],
+    // Komercijalna: [
+    //   {
+    //     id: 1,
+    //     title: "Ask Me Anything: 10 answers to your questions about coffee",
+    //     date: "2d ago",
+    //     commentCount: 9,
+    //     shareCount: 5,
+    //   },
+    //   {
+    //     id: 2,
+    //     title: "The worst advice we've ever heard about coffee",
+    //     date: "4d ago",
+    //     commentCount: 1,
+    //     shareCount: 2,
+    //   },
+    // ],
   });
 
   return (
@@ -148,40 +148,40 @@ export default function Tabovi() {
               )}
             >
               <div className="container">
-                <div className="md:flex mb-5">
-                  <div className="min-w-[200px] md:w-2/6 mx-1">
+                <div className="md:flex md:mb-5">
+                  <div className="min-w-[200px] md:w-2/6 mx-1 my-1">
                     <MultipleSelect placeholder="Brend" options={brend} />
                   </div>
-                  <div className="min-w-[200px] md:w-3/6 mx-1">
+                  <div className="min-w-[200px] md:w-3/6 mx-1 my-1">
                     <MultipleSelect placeholder="Model" options={model} />
                   </div>
-                  <div className="min-w-[200px] md:w-1/6 mx-1">
+                  <div className="sm:min-w-[200px] w-[200px] md:w-1/6 mx-1 my-1">
                     <MultipleSelect placeholder="Stanje" options={stanje} />
                   </div>
                 </div>
-                <div className="md:flex mb-5">
-                  <div className="min-w-[100px] md:w-1/4 mx-1">
+                <div className="grid grid-cols-2 md:flex sm:mb-5">
+                  <div className="min-w-[100px]  md:w-1/4 mx-1 my-1">
                     <MultipleSelect
                       placeholder="Godina od"
                       options={godina}
                       multiple={0}
                     />
                   </div>
-                  <div className="min-w-[100px] md:w-1/4 mx-1">
+                  <div className="min-w-[100px]  md:w-1/4 mx-1 my-1">
                     <MultipleSelect
                       placeholder="Godina do"
                       options={godina}
                       multiple={0}
                     />
                   </div>
-                  <div className="min-w-[100px] md:w-1/4 mx-1">
+                  <div className="min-w-[100px]  md:w-1/4 mx-1 my-1">
                     <MultipleSelect
                       placeholder="Cena od"
                       options={godina}
                       multiple={0}
                     />
                   </div>
-                  <div className="min-w-[100px] md:w-1/4 mx-1">
+                  <div className="min-w-[100px]   md:w-1/4 mx-1 my-1">
                     <MultipleSelect
                       placeholder="Cena do"
                       options={godina}
@@ -189,9 +189,9 @@ export default function Tabovi() {
                     />
                   </div>
                 </div>
-                <div className="md:flex mb-5 items-center">
+                <div className="md:flex mb-4 items-center">
                   <a className="w-4/12 pl-6 font-bold text-lg cursor-pointer text-blue-700 hover:text-emerald-600">
-                    <p>Napredna pretraga</p>
+                    <p className="mb-3 md:mb-0">Napredna pretraga</p>
                   </a>
                   <button
                     type="button"
