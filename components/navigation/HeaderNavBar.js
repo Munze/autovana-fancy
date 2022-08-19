@@ -4,7 +4,6 @@ import {
   KeyIcon,
   LoginIcon,
   MenuIcon,
-  ShoppingCartIcon,
   UserIcon,
   XIcon,
 } from "@heroicons/react/outline";
