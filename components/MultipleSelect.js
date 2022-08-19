@@ -3,7 +3,7 @@ import Select from 'react-tailwindcss-select';
 
 
 
-export const MultipleSelect = ({options,placeholder}) => {
+export const MultipleSelect = ({options,placeholder, multiple}) => {
   const [value, setValue] = useState(null);
 
   const handleChange = (value) => {
@@ -17,7 +17,7 @@ export const MultipleSelect = ({options,placeholder}) => {
         value={value}
         onChange={handleChange}
         options={options}
-        isMultiple="true"
+        isMultiple={multiple===0 ? false : true}
         noOptionsMessage="Nema podudaranja"
         placeholder={placeholder}
         searchInputPlaceholder="Pretraži..."

@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { HomePageSearch } from "../components/HomePageSearch";
 import { MultipleSelect } from "../components/MultipleSelect";
 import Tabovi from "../components/navigation/Tabovi";
 
@@ -39,10 +40,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="container mx-auto my-3">
-        <div className="max-w-[800px] rounded-lg shadow-md bg-blue-300/10 p-3 md:flex">
-         <Tabovi /> 
-
-        </div>
+        <HomePageSearch />
       </div>
     </div>
   );

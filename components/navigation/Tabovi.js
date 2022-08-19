@@ -13,7 +13,38 @@ const brend = [
   { label: "Lada", value: "8" },
   { label: "Fiat", value: "9" },
 ];
+const model = [
+  { label: "Ford F-Series", value: "1" },
+  { label: "Golf", value: "2" },
+  { label: "Clio", value: "3" },
+  { label: "Polo", value: "4" },
+  { label: "Tiguan", value: "5", disabled: true },
+  { label: "Corsa", value: "6" },
+  { label: "208", value: "7" },
+  { label: "Qashqai", value: "8" },
+  { label: "Captur", value: "9" },
+];
+const stanje = [
+  { label: "Novo", value: "1" },
+  { label: "Polovno", value: "2" },
+  { label: "Oštećeno", value: "3" },
+];
 
+const godina = [
+  { label: "2010", value: 2010 },
+  { label: "2011", value: 2011 },
+  { label: "2012", value: 2012 },
+  { label: "2013", value: 2013 },
+  { label: "2014", value: 2014 },
+  { label: "2015", value: 2015 },
+  { label: "2016", value: 2016 },
+  { label: "2017", value: 2017 },
+  { label: "2018", value: 2018 },
+  { label: "2019", value: 2019 },
+  { label: "2020", value: 2020 },
+  { label: "2021", value: 2021 },
+  { label: "2022", value: 2022 },
+];
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
@@ -117,28 +148,58 @@ export default function Tabovi() {
               )}
             >
               <div className="container">
-                  <div className="md:flex mb-5">
-                      <div className="min-w-[200px] md:w-2/6 mx-1">
-                        <MultipleSelect placeholder="Brend" options={brend} />
-                      </div>
-                      <div className="min-w-[200px] md:w-2/6 mx-1">
-                        <MultipleSelect placeholder="Brend" options={brend} />
-                      </div>
-                      <div className="min-w-[200px] md:w-2/6 mx-1">
-                        <MultipleSelect placeholder="Brend" options={brend} />
-                      </div>
+                <div className="md:flex mb-5">
+                  <div className="min-w-[200px] md:w-2/6 mx-1">
+                    <MultipleSelect placeholder="Brend" options={brend} />
                   </div>
-                  {/* <div className="md:flex mb-5">
-                      <div className="min-w-[200px] md:w-2/6 mx-1">
-                        <MultipleSelect placeholder="Brend" options={brend} />
-                      </div>
-                      <div className="min-w-[200px] md:w-2/6 mx-1">
-                        <MultipleSelect placeholder="Brend" options={brend} />
-                      </div>
-                      <div className="min-w-[200px] md:w-2/6 mx-1">
-                        <MultipleSelect placeholder="Brend" options={brend} />
-                      </div>
-                  </div> */}
+                  <div className="min-w-[200px] md:w-3/6 mx-1">
+                    <MultipleSelect placeholder="Model" options={model} />
+                  </div>
+                  <div className="min-w-[200px] md:w-1/6 mx-1">
+                    <MultipleSelect placeholder="Stanje" options={stanje} />
+                  </div>
+                </div>
+                <div className="md:flex mb-5">
+                  <div className="min-w-[100px] md:w-1/4 mx-1">
+                    <MultipleSelect
+                      placeholder="Godina od"
+                      options={godina}
+                      multiple={0}
+                    />
+                  </div>
+                  <div className="min-w-[100px] md:w-1/4 mx-1">
+                    <MultipleSelect
+                      placeholder="Godina do"
+                      options={godina}
+                      multiple={0}
+                    />
+                  </div>
+                  <div className="min-w-[100px] md:w-1/4 mx-1">
+                    <MultipleSelect
+                      placeholder="Cena od"
+                      options={godina}
+                      multiple={0}
+                    />
+                  </div>
+                  <div className="min-w-[100px] md:w-1/4 mx-1">
+                    <MultipleSelect
+                      placeholder="Cena do"
+                      options={godina}
+                      multiple={0}
+                    />
+                  </div>
+                </div>
+                <div className="md:flex mb-5 items-center">
+                  <a className="w-4/12 pl-6 font-bold text-lg cursor-pointer text-blue-700 hover:text-emerald-600">
+                    <p>Napredna pretraga</p>
+                  </a>
+                  <button
+                    type="button"
+                    class="w-8/12 inline-block uppercase px-6 py-2.5 bg-emerald-400 text-white text-lg font-extrabold leading-tight rounded shadow-md hover:bg-emerald-500 hover:shadow-lg focus:bg-emerald-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-400 active:shadow-lg transition duration-150 ease-in-out"
+                  >
+                    1.245 rezultata
+                  </button>
+                </div>
               </div>
             </Tab.Panel>
           ))}
