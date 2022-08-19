@@ -58,7 +58,7 @@ export const HeaderNavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("Automobili");
   return (
-    <div className="relative w-full bg-white">
+    <div className="relative w-full">
       {/* :STORE NAVIGATION (SMALL DEVICE) */}
       <div className="md:hidden">
         {/* ::Overlay Background */}
@@ -163,7 +163,7 @@ export const HeaderNavBar = () => {
       <header className="relative">
         {/* ::Top Header */}
         {!signedIn ? (
-          <div className="relative py-2 px-4 w-full flex justify-between items-center bg-indigo-50 text-gray-700">
+          <div className="relative py-2 px-4 w-full flex justify-between items-center bg-gray-100 text-gray-700">
             {/* :::Currency select */}
             <div>
               <label htmlFor="language" className="sr-only">
@@ -172,7 +172,7 @@ export const HeaderNavBar = () => {
               <select
                 name="language"
                 id="language"
-                className="form-select bg-indigo-50 border-none text-sm font-bold text-gray-700 outline-none cursor-pointer focus:ring-0"
+                className="form-select bg-gray-100 border-none text-sm font-bold text-gray-700 outline-none cursor-pointer focus:ring-0"
               >
                 <option value="english">EUR</option>
                 <option value="french">RSD</option>
