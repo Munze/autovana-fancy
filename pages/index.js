@@ -41,7 +41,7 @@ export default function Home() {
       </Head>
       <div className="container mx-auto my-3">
         <div
-          className="bg-blue-300/10 p-10 my-3 bg-cover rounded-md shadow-sm"
+          className="bg-blue-300/10 p-10 my-3 bg-cover md:bg-cover rounded-md shadow-sm"
           style={{
             backgroundImage:
               "url(https://img.freepik.com/free-photo/red-sport-car-front-side-view-black-wheel-with-metallic-silver-color_114579-1160.jpg?w=1380&t=st=1660924252~exp=1660924852~hmac=636ca62f5caa137fd9e85ab7327b50b029cbf4053b7cf7dd2bc2c67704e284ec)",
