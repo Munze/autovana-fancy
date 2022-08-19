@@ -14,7 +14,7 @@ const signedIn = false;
 const navigation = {
   pages: [
     { name: "Novo!", href: "#link" },
-    { name: "Za agencije", href: "#link" },
+    { name: "Za agencije", href: "/agencije-cene" },
     { name: "Krediti", href: "#link" },
     { name: "Kontakt", href: "#link" },
   ],
@@ -227,7 +227,7 @@ export const HeaderNavBar = () => {
                 </button>
                 {/* ::::logo  */}
                 <a
-                  href="#link"
+                  href="/"
                   className="inline-flex justify-center items-center mb-1.5 text-white"
                 >
                   {/* <p className="font-bold text-2xl mr-2">autovana</p> */}
