@@ -1,4 +1,4 @@
-module.exports = {
+{
     "env": {
         "browser": true,
         "es2021": true
@@ -9,9 +9,6 @@ module.exports = {
         "next/core-web-vitals"
     ],
     "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
         "ecmaVersion": 12,
         "sourceType": "module"
     },
@@ -20,4 +17,4 @@ module.exports = {
     ],
     "rules": {
     }
-};
+}
