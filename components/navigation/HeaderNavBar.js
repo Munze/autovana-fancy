@@ -131,6 +131,7 @@ export const HeaderNavBar = () => {
             <div className="py-5 px-4 flex flex-col space-y-2 border-t-2">
               {navigation.pages.map((page) => (
                 <a
+                  key={page.href}
                   href={page.href}
                   className="py-1 px-4 rounded-md text-base text-gray-700 font-semibold tracking-wide hover:bg-[#041594] hover:text-white"
                 >
