@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { SearchSidebar } from './SearchSidebar'
 
-export const BottomNav = () => {
+export const BottomNav = ({isOpen}) => {
+    const [showSearch, setShowSearch]=useState(false)
+
   return (
     <div className="w-full h-screen">
 	<section id="bottom-navigation" className="md:hidden block fixed inset-x-0 bottom-0 z-10 bg-white shadow"> 
@@ -33,7 +36,9 @@ export const BottomNav = () => {
 				</svg>
 				<span className="tab tab-kategori block text-xs">Kategorije</span>
 			</a>
-			<a href="#" className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1">
+			<a href="#" className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1"
+            onClick={() => {setShowSearch(!showSearch); console.log(showSearch);}}
+            >
 				<svg width="25" height="25" viewBox="0 0 42 42" className="inline-block mb-1">
 			    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 		        	<path d="M20.5890101,0.254646884 C12.8696785,5.50211755 8.0025785,14.258415 14.1941217,18.8708225 C23.16683,25.5550669 13.3362326,40.2698884 33.1021758,38.4149164 C29.6814884,40.8311956 25.5065164,42.2507054 21,42.2507054 C9.40202025,42.2507054 0,32.8486852 0,21.2507054 C0,9.79003409 9.18071714,0.473634138 20.5890101,0.254646884 Z" fill="currentColor" opacity="0.1"></path>
@@ -75,6 +80,7 @@ export const BottomNav = () => {
 			</a>
 		</div>
 	</section>
+    
 </div>
   )
 }
