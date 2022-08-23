@@ -31,18 +31,18 @@ const Agencije = () => {
   );
 
   return (
-    <div className="w-full py-10 px-5 flex flex-col items-center bg-gradient-to-tr from-sky-700 to-sky-300 font-body">
+    <div className="w-full py-10 px-5 flex flex-col items-center font-body">
       {" "}
       {/* Container */}
       {/* :TITLE */}
-      <div className="mb-16 text-center text-white">
-        <h1 className="font-title py-2 text-5xl font-black tracking-wider antialiased">
-          Fancy Pricing Table 1
+      <div className="mb-16 text-center text-blue-700">
+        <h1 className="uppercase font-title py-2 text-5xl font-black tracking-wider antialiased">
+          6 meseci besplatno
         </h1>
         <p className="text-lg">
-          A beautiful and classy pricing table made with Tailwind CSS and love !{" "}
+          Iskoristite ponudu za agencije. Probajte 3 meseca besplatno <span className="font-extrabold text-green-600">MEGA</span> paket.{" "}
           <br />
-          by Fancy Tailwind.
+          Bez ikakve obaveze naknadno.
         </p>
       </div>
       {/* :PRICING TABLES */}
@@ -51,12 +51,12 @@ const Agencije = () => {
         <div className="col-span-3 lg:col-span-1 my-4 py-9 px-12 flex flex-col items-center bg-gray-100 text-gray-600 rounded-2xl shadow-xl">
           {/* Offer name */}
           <h2 className="font-title mb-1 text-xl font-semibold uppercase tracking-wider">
-            Basic
+            Osnovni
           </h2>
           {/* Price */}
           <div className="p-4 flex items-baseline">
-            <h3 className="font-title text-5xl font-bold ">$59</h3>
-            <span className="ml-2">/ month</span>
+            <h3 className="font-title text-3xl font-bold ">3,999 <span className="text-md">RSD</span></h3>
+            <span className="ml-2">/ mesečno</span>
           </div>
           {/* Divide line */}
           <span className="w-28 h-1.5 bg-sky-600 rounded-3xl" />
@@ -87,9 +87,9 @@ const Agencije = () => {
               Lorem ipsum dolor.
             </li>
           </ul>
-          {/* Subscribe */}
+          {/* Pretplati se */}
           <button className="py-2 px-10 rounded-3xl bg-sky-500 text-lg text-gray-100 font-medium tracking-wide antialiased shadow-lg transition duration-100 ease-in transform hover:scale-105 hover:bg-sky-600">
-            Subscribe
+            Pretplati se
           </button>
         </div>
 
@@ -97,12 +97,12 @@ const Agencije = () => {
         <div className="col-span-3 lg:col-span-1 my-4 py-9 px-12 flex flex-col items-center bg-gray-100 text-gray-600 rounded-2xl shadow-xl">
           {/* Offer name */}
           <h2 className="font-title mb-1 text-xl font-semibold uppercase tracking-wider">
-            Pro
+            Optimum
           </h2>
           {/* Price */}
           <div className="p-4 flex items-baseline">
-            <h3 className="font-title text-5xl font-bold ">$119</h3>
-            <span className="ml-2">/ month</span>
+            <h3 className="font-title text-3xl font-bold ">5,999 RSD</h3>
+            <span className="ml-2">/ mesečno</span>
           </div>
           {/* Divide line */}
           <span className="w-28 h-1.5 bg-sky-600 rounded-3xl" />
@@ -133,22 +133,22 @@ const Agencije = () => {
               Lorem ipsum dolor.
             </li>
           </ul>
-          {/* Subscribe */}
+          {/* Pretplati se */}
           <button className="py-2 px-10 rounded-3xl bg-sky-500 text-lg text-gray-100 font-medium tracking-wide antialiased shadow-lg transition duration-100 ease-in transform hover:scale-105 hover:bg-sky-600">
-            Subscribe
+            Pretplati se
           </button>
         </div>
 
         {/* ::Offer 3 */}
-        <div className="col-span-3 lg:col-span-1 my-4 py-9 px-12 flex flex-col items-center bg-gray-100 text-gray-600 rounded-2xl shadow-xl">
+        <div className="col-span-3 lg:col-span-1 my-4 py-9 px-12 flex flex-col items-center bg-blue-100 text-gray-600 rounded-2xl shadow-xl border-4 border-green-700">
           {/* Offer name */}
           <h2 className="font-title mb-1 text-xl font-semibold uppercase tracking-wider">
-            Enterprise
+            Mega
           </h2>
           {/* Price */}
           <div className="p-4 flex items-baseline">
-            <h3 className="font-title text-5xl font-bold ">$299</h3>
-            <span className="ml-2">/ month</span>
+            <h3 className="font-title text-3xl font-bold ">7,999 RSD</h3>
+            <span className="ml-2">/ mesečno</span>
           </div>
           {/* Divide line */}
           <span className="w-28 h-1.5 bg-sky-600 rounded-3xl" />
@@ -179,9 +179,9 @@ const Agencije = () => {
               Lorem ipsum dolor.
             </li>
           </ul>
-          {/* Subscribe */}
+          {/* Pretplati se */}
           <button className="py-2 px-10 rounded-3xl bg-sky-500 text-lg text-gray-100 font-medium tracking-wide antialiased shadow-lg transition duration-100 ease-in transform hover:scale-105 hover:bg-sky-600">
-            Subscribe
+            Iskoristi priliku!
           </button>
         </div>
       </div>
