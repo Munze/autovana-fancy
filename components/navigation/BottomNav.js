@@ -6,7 +6,7 @@ export const BottomNav = () => {
 	<section id="bottom-navigation" className="md:hidden block fixed inset-x-0 bottom-0 z-10 bg-white shadow"> 
 	{/* <section id="bottom-navigation" className="block fixed inset-x-0 bottom-0 z-10 bg-white shadow"> */}
 		<div id="tabs" className="flex justify-between">
-			<a href="#" className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1">
+			<a href="/" className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1">
 				<svg width="25" height="25" viewBox="0 0 42 42" className="inline-block mb-1">
 			    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 			        <path d="M21.0847458,3.38674884 C17.8305085,7.08474576 17.8305085,10.7827427 21.0847458,14.4807396 C24.3389831,18.1787365 24.3389831,22.5701079 21.0847458,27.6548536 L21.0847458,42 L8.06779661,41.3066256 L6,38.5331279 L6,26.2681048 L6,17.2542373 L8.88135593,12.4006163 L21.0847458,2 L21.0847458,3.38674884 Z" fill="currentColor" fill-opacity="0.1"></path>
@@ -16,7 +16,7 @@ export const BottomNav = () => {
 			        <rect fill="currentColor" transform="translate(12.000000, 11.313708) rotate(-45.000000) translate(-12.000000, -11.313708) " x="-3" y="10.3137085" width="30" height="2" rx="1"></rect>
 			    </g>
 				</svg>
-				<span className="tab tab-home block text-xs">Home</span>
+				<span className="tab tab-home block text-xs">Nazad</span>
 			</a>
 			<a href="#" className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1">
 				<svg width="25" height="25" viewBox="0 0 42 42" className="inline-block mb-1">
@@ -31,7 +31,7 @@ export const BottomNav = () => {
 		        </g>
 		    	</g>
 				</svg>
-				<span className="tab tab-kategori block text-xs">Category</span>
+				<span className="tab tab-kategori block text-xs">Kategorije</span>
 			</a>
 			<a href="#" className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1">
 				<svg width="25" height="25" viewBox="0 0 42 42" className="inline-block mb-1">
@@ -41,7 +41,7 @@ export const BottomNav = () => {
 		        	<circle stroke="currentColor" stroke-width="2" cx="21" cy="21" r="20"></circle>
 		    		</g>
 					</svg>
-				<span className="tab tab-explore block text-xs">Explore</span>
+				<span className="tab tab-explore block text-xs">Pretraga</span>
 			</a>
 			<a href="#" className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1">
 				<svg width="25" height="25" viewBox="0 0 42 42" className="inline-block mb-1">
@@ -56,7 +56,7 @@ export const BottomNav = () => {
 		        </g>
 		    	</g>
 				</svg>
-				<span className="tab tab-whishlist block text-xs">Whishlist</span>
+				<span className="tab tab-whishlist block text-xs">Moja pracenja</span>
 			</a>
 			<a href="#" className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1">
 				<svg width="25" height="25" viewBox="0 0 42 42" className="inline-block mb-1">
@@ -71,7 +71,7 @@ export const BottomNav = () => {
 		        </g>
 		    	</g>
 				</svg>
-				<span className="tab tab-account block text-xs">Account</span>
+				<span className="tab tab-account block text-xs">Moj nalog</span>
 			</a>
 		</div>
 	</section>
