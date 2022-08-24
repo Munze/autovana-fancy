@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { SearchSidebar } from "./SearchSidebar";
 import { useDispatch, useSelector } from "react-redux";
-import { changeVisible } from "../../store/searchSideBarSlice";
+import { changeVisible as changeSearch } from "../../store/searchSideBarSlice";
+import { changeVisible as changeMenu } from '../../store/menuOpenSlice'
 
 export const BottomNav = () => {
   const { visible } = useSelector((store) => store.searchBar);
@@ -38,6 +39,9 @@ export const BottomNav = () => {
           <a
             href="#"
             className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1"
+            onClick={() => {
+                dispatch(changeMenu());
+              }}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +64,7 @@ export const BottomNav = () => {
             href="#"
             className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1"
             onClick={() => {
-              dispatch(changeVisible());
+              dispatch(changeSearch());
             }}
           >
             <svg
