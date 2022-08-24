@@ -7,6 +7,8 @@ import {
   UserIcon,
   XIcon,
 } from "@heroicons/react/outline";
+import { useDispatch, useSelector } from "react-redux";
+import { changeVisible, setVisible } from "../../store/menuOpenSlice";
 
 const signedIn = false;
 
@@ -54,8 +56,10 @@ const navigation = {
 };
 
 export const HeaderNavBar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState("Automobili");
+  const {visible} = useSelector((store) => store.menuOpen);
+  const dispatch = useDispatch();
+  
+  const [activeTab, setActiveTab] = useState("automobili");
   return (
     <div className="relative w-full">
       {/* :STORE NAVIGATION (SMALL DEVICE) */}
@@ -63,14 +67,14 @@ export const HeaderNavBar = () => {
         {/* ::Overlay Background */}
         <div
           className={`z-30 fixed inset-0 w-full h-screen bg-gray-500 bg-opacity-75 ${
-            isMenuOpen ? "visible" : "invisible"
+            visible ? "visible" : "invisible"
           }`}
         />
 
         {/* ::Mobile Menu */}
         <div
           className={`z-50 fixed top-0 left-0 lg:inset-0 lg:relative w-full h-full max-h-screen max-w-xs overflow-y-scroll lg:overflow-auto bg-gray-50 transition-all duration-300 ease-in-out transform ${
-            isMenuOpen
+            visible
               ? "translate-x-0 opacity-100"
               : "-translate-x-full opacity-0"
           }`}
@@ -80,7 +84,9 @@ export const HeaderNavBar = () => {
             <span className="pt-3 pb-5 pr-3 flex justify-end">
               <button
                 className="text-gray-500 hover:text-indigo-600"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => 
+                  dispatch(changeVisible())
+                }
               >
                 <XIcon className="w-7 h-7" />
               </button>
@@ -161,8 +167,6 @@ export const HeaderNavBar = () => {
 
       {/* :STORE NAVIGATION */}
       <header className="relative">
-
-
         {/* ::Main Menu */}
         <div className="relative py-4 px-4 bg-[#1E34E0]">
           <div className="mx-auto max-w-[1480px] flex justify-between items-center">
@@ -174,7 +178,9 @@ export const HeaderNavBar = () => {
                 <button
                   className="md:hidden mr-4 text-indigo-200 hover:text-white"
                   aria-label="open navigation menu"
-                  onClick={() => setIsMenuOpen(true)}
+                  onClick={() => 
+                    dispatch(changeVisible())
+                  }
                 >
                   <MenuIcon className="w-8 h-8" />
                 </button>

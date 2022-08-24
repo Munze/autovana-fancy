@@ -4,15 +4,15 @@ const initialState = {
     visible: false,
 }
 
-const searchBarSlice = createSlice({
-    name: 'searchBar',
+const menuSlice = createSlice({
+    name: 'menuOpen',
     initialState,
     reducers: { 
         changeVisible:(state) => {
         state.visible = !state.visible 
     },
-        
+    setVisible:(state) => {state.visible=true}
 }})
 
-export default searchBarSlice.reducer
-export const { changeVisible } = searchBarSlice.actions;
+export default menuSlice.reducer
+export const { changeVisible, setVisible } = menuSlice.actions;
