@@ -55,7 +55,7 @@ const Agencije = () => {
           </h2>
           {/* Price */}
           <div className="p-4 flex items-baseline">
-            <h3 className="font-title text-3xl font-bold ">3,999 <span className="text-sm">RSD</span></h3>
+            <h3 className="font-title text-3xl font-bold ">3,999 <span className="text-sm"></span></h3>
             <span className="ml-2">/ mesečno</span>
           </div>
           {/* Divide line */}
@@ -101,7 +101,7 @@ const Agencije = () => {
           </h2>
           {/* Price */}
           <div className="p-4 flex items-baseline">
-            <h3 className="font-title text-3xl font-bold ">5,999 <span className="text-sm">RSD</span></h3>
+            <h3 className="font-title text-3xl font-bold ">5,999 <span className="text-sm"></span></h3>
             <span className="ml-2">/ mesečno</span>
           </div>
           {/* Divide line */}
@@ -147,7 +147,7 @@ const Agencije = () => {
           </h2>
           {/* Price */}
           <div className="p-4 flex items-baseline">
-            <h3 className="font-title text-3xl font-bold ">7,999 <span className="text-sm">RSD</span></h3>
+            <h3 className="font-title text-3xl font-bold ">7,999 <span className="text-sm"></span></h3>
             <span className="ml-2">/ mesečno</span>
           </div>
           {/* Divide line */}
