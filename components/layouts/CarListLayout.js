@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { Card } from '../cards/Card'
 
 export const CarListLayout = () => {

@@ -33,7 +33,7 @@ export const BottomNav = () => {
               />
             </svg>
 
-            <span className="tab tab-home block text-xs">Nazad</span>
+            <span className="tab tab-home block text-xs"></span>
           </a>
           <a
             href="#"
@@ -54,14 +54,13 @@ export const BottomNav = () => {
               />
             </svg>
 
-            <span className="tab tab-kategori block text-xs">Kategorije</span>
+            <span className="tab tab-kategori block text-xs"></span>
           </a>
           <a
             href="#"
             className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1"
             onClick={() => {
               dispatch(changeVisible());
-              console.log(changeVisible);
             }}
           >
             <svg
@@ -100,7 +99,7 @@ export const BottomNav = () => {
             </svg>
 
             <span className="tab tab-whishlist block text-xs">
-              Moja pracenja
+             
             </span>
           </a>
           <a
@@ -122,7 +121,7 @@ export const BottomNav = () => {
               />
             </svg>
 
-            <span className="tab tab-account block text-xs">Moj nalog</span>
+            <span className="tab tab-account block text-xs"></span>
           </a>
         </div>
       </section>

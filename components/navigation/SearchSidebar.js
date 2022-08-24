@@ -6,7 +6,6 @@ export const SearchSidebar = () => {
   const visible = useSelector((state) => state.searchBar.visible);
   const dispatch = useDispatch();
 
-  console.log(visible);
   if (visible)
     return (
       <aside className={"ease-in-out duration-300 md:invisible"}>
@@ -21,7 +20,6 @@ export const SearchSidebar = () => {
               className="cursor-pointer w-9"
               onClick={() => {
                 dispatch(changeVisible());
-                console.log(changeVisible);
               }}
             >
               <svg
