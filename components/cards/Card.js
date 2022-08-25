@@ -27,9 +27,9 @@ export const Card = () => {
         <PillSpec spec="123.450 km" />
       </div>
       <div className="grid grid-cols-1 justify-items-end">
-        <div className="font-bold text-lg pt-3 pr-3 proportional-nums">2.400</div>
+        <div className="font-bold text-xl pt-3 pr-3 proportional-nums">2.400</div>
       </div>
-      <div className="grid grid-cols-2 rounded-md p-1 items-center justify-self-start bg-slate-200">
+      <div className="grid grid-cols-2 p-1 items-center justify-self-start">
         <div className="font-bold text-xs italic ">
           <p className="line-clamp-1">Imperial Auto</p>
         </div>
