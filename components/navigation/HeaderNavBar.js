@@ -168,22 +168,12 @@ export const HeaderNavBar = () => {
       {/* :STORE NAVIGATION */}
       <header className="relative">
         {/* ::Main Menu */}
-        <div className="relative py-4 px-4 bg-[#1E34E0]">
+        <div className="relative py-1 px-4 bg-[#1E34E0]">
           <div className="mx-auto max-w-[1480px] flex justify-between items-center">
             {/* Container */}
             <div className="flex items-center space-x-4">
-              {/* :::Site logo & Burger icon */}
+              {/* :::Site logo  */}
               <div className="flex items-center">
-                {/* ::::burger button (small device) */}
-                <button
-                  className="md:hidden mr-4 text-indigo-200 hover:text-white"
-                  aria-label="open navigation menu"
-                  onClick={() => 
-                    dispatch(changeVisible())
-                  }
-                >
-                  <MenuIcon className="w-8 h-8" />
-                </button>
                 {/* ::::logo  */}
                 <a
                   href="/"
@@ -191,7 +181,7 @@ export const HeaderNavBar = () => {
                 >
                   {/* <p className="font-bold text-2xl mr-2">autovana</p> */}
                   <div
-                    className="flex flex-col justify-center items-center bg-cover bg-clip-text bg-center text-transparent text-4xl sm:text-3xl font-extrabold tracking-wide antialiased bg-white"
+                    className="flex flex-col justify-center items-center bg-cover bg-clip-text bg-center text-transparent text-3xl sm:text-3xl font-extrabold tracking-wide antialiased bg-white"
                     // style={{
                     //   backgroundImage:
                     //     "url(https://media4.giphy.com/media/twQYPSiVdcq3s2KFyo/giphy.gif?cid=ecf05e474t4sguptmtct4esiiaus9zujaoj8af82iuavfrev&rid=giphy.gif&ct=g)",

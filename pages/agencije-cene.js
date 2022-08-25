@@ -36,7 +36,7 @@ const Agencije = () => {
       {/* Container */}
       {/* :TITLE */}
       <div className="mb-16 text-center text-blue-700">
-        <h1 className="uppercase font-title py-2 text-5xl font-black tracking-wider antialiased">
+        <h1 className="uppercase font-title py-2 text-4xl font-black tracking-wider antialiased">
           6 meseci besplatno
         </h1>
         <p className="text-lg">
@@ -56,7 +56,7 @@ const Agencije = () => {
           {/* Price */}
           <div className="p-4 flex items-baseline">
             <h3 className="font-title text-3xl font-bold ">3,999 <span className="text-sm"></span></h3>
-            <span className="ml-2">/ mesečno</span>
+            <span className="ml-2">/ mes</span>
           </div>
           {/* Divide line */}
           <span className="w-28 h-1.5 bg-sky-600 rounded-3xl" />
@@ -102,7 +102,7 @@ const Agencije = () => {
           {/* Price */}
           <div className="p-4 flex items-baseline">
             <h3 className="font-title text-3xl font-bold ">5,999 <span className="text-sm"></span></h3>
-            <span className="ml-2">/ mesečno</span>
+            <span className="ml-2">/ mes</span>
           </div>
           {/* Divide line */}
           <span className="w-28 h-1.5 bg-sky-600 rounded-3xl" />
@@ -148,7 +148,7 @@ const Agencije = () => {
           {/* Price */}
           <div className="p-4 flex items-baseline">
             <h3 className="font-title text-3xl font-bold ">7,999 <span className="text-sm"></span></h3>
-            <span className="ml-2">/ mesečno</span>
+            <span className="ml-2">/ mes</span>
           </div>
           {/* Divide line */}
           <span className="w-28 h-1.5 bg-sky-600 rounded-3xl" />

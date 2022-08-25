@@ -1,7 +1,7 @@
 import { KeyIcon, LoginIcon } from "@heroicons/react/outline";
 import React from "react";
 
-const signedIn = false;
+const signedIn = true;
 
 export const TopHeader = () => {
   return (
@@ -19,9 +19,9 @@ export const TopHeader = () => {
               id="language"
               className="form-select bg-gray-100 border-none text-sm font-bold text-gray-700 outline-none cursor-pointer focus:ring-0"
             >
-              <option value="english">EUR</option>
-              <option value="french">RSD</option>
-              <option value="spanish">USD</option>
+              <option className="" value="eur">EUR</option>
+              <option value="rsd">RSD</option>
+              <option value="usd">USD</option>
             </select>
           </div>
           {/* :::Promo text */}

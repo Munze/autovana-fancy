@@ -3,18 +3,19 @@ import { SearchSidebar } from "./SearchSidebar";
 import { useDispatch, useSelector } from "react-redux";
 import { changeVisible as changeSearch } from "../../store/searchSideBarSlice";
 import { changeVisible as changeMenu } from '../../store/menuOpenSlice'
+import { SSDB } from "./SSDB";
 
 export const BottomNav = () => {
   const { visible } = useSelector((store) => store.searchBar);
   const dispatch = useDispatch();
   return (
-    <div className="w-full h-screen">
+    <div className="w-full h-screen ">
       <section
         id="bottom-navigation"
-        className="md:hidden block fixed inset-x-0 bottom-0 z-10 bg-white shadow"
+        className="md:hidden block fixed inset-x-0 bottom-0 z-50 bg-white shadow mb-0.5"
       >
-        {/* <section id="bottom-navigation" className="block fixed inset-x-0 bottom-0 z-10 bg-white shadow"> */}
         <div id="tabs" className="flex justify-between items-baseline">
+            {/* # Home */}
           <a
             href="/"
             className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1"
@@ -36,6 +37,7 @@ export const BottomNav = () => {
 
             <span className="tab tab-home block text-xs"></span>
           </a>
+          {/* # Menu */}
           <a
             href="#"
             className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1"
@@ -60,9 +62,10 @@ export const BottomNav = () => {
 
             <span className="tab tab-kategori block text-xs"></span>
           </a>
+          {/* # Search */}
           <a
             href="#"
-            className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1"
+            className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center -pt-2 pb-1"
             onClick={() => {
               dispatch(changeSearch());
             }}
@@ -83,6 +86,7 @@ export const BottomNav = () => {
             </svg>
             <span className="tab tab-explore block text-xs"></span>
           </a>
+          {/* # Favorites */}
           <a
             href="#"
             className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1"
@@ -106,6 +110,7 @@ export const BottomNav = () => {
              
             </span>
           </a>
+          {/* # Profile */}
           <a
             href="#"
             className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1"
@@ -130,7 +135,7 @@ export const BottomNav = () => {
         </div>
       </section>
 
-      <SearchSidebar />
+      <SSDB />
     </div>
   );
 };
