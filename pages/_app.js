@@ -10,8 +10,10 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Provider store={store}>
-        <TopHeader />
-        <HeaderNavBar />
+        <div className="md:fixed md:top-0 md:left-0 z-30 w-screen">
+          <TopHeader />
+          <HeaderNavBar />
+        </div>
         <Component {...pageProps} />
         <BottomNav />
       </Provider>

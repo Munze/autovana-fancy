@@ -5,7 +5,7 @@ import Image from "next/image";
 import { PillSpec } from "./PillSpec";
 export const Card = () => {
   return (
-    <div className="relative max-h-[400px] m-1 p-1 rounded-md shadow-md hover:shadow-green-400 hover:shadow-md">
+    <div className="max-h-[400px] m-1 p-1 rounded-md shadow-md hover:shadow-green-400 hover:shadow-md">
       <div className="h-[180px] bg-slate-700">
         <Image
           src="/img/7.webp"
@@ -16,7 +16,6 @@ export const Card = () => {
         />
       </div>
       <div className="">
-        {" "}
         <h3 className="text-md font-semibold text-blue-600 line-clamp-2 tracking-tight ">
           Toyota Auris 1,8 HSD 5-TG. EDITION45
         </h3>{" "}

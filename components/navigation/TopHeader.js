@@ -1,11 +1,11 @@
 import { KeyIcon, LoginIcon } from "@heroicons/react/outline";
 import React from "react";
 
-const signedIn = true;
+const signedIn = false;
 // comment
 export const TopHeader = () => {
   return (
-    <div>
+    <div className="">
       {/* ::Top Header */}
       {!signedIn ? (
         <div className="relative py-2 px-4 w-full flex justify-between items-center bg-gray-100 text-gray-700">
