@@ -1,19 +1,23 @@
 import { useState } from "react";
 import { Tab } from "@headlessui/react";
 import { MultipleSelect } from "../MultipleSelect";
+import {RenameKeys} from '../utils/RenameKeys'
 
-const brend = [
-  { label: "Audi", value: "1" },
-  { label: "Alfa Romeo", value: "2" },
-  { label: "Abarth", value: "3" },
-  { label: "BMW", value: "4" },
-  { label: "Daewoo", value: "5", disabled: true },
-  { label: "Dodge", value: "6" },
-  { label: "Dacia", value: "7" },
-  { label: "Lada", value: "8" },
-  { label: "Fiat", value: "9" },
-];
+
+
+
 const model = [
+  { label: "Ford F-Series", value: "1" },
+  { label: "Golf", value: "2" },
+  { label: "Clio", value: "3" },
+  { label: "Polo", value: "4" },
+  { label: "Tiguan", value: "5", disabled: true },
+  { label: "Corsa", value: "6" },
+  { label: "208", value: "7" },
+  { label: "Qashqai", value: "8" },
+  { label: "Captur", value: "9" },
+];
+const brend = [
   { label: "Ford F-Series", value: "1" },
   { label: "Golf", value: "2" },
   { label: "Clio", value: "3" },
@@ -49,7 +53,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Tabovi() {
+export default function Tabovi({brendovi}) {
   let [categories] = useState({
     Automobili: [
       {
@@ -83,38 +87,6 @@ export default function Tabovi() {
         shareCount: 12,
       },
     ],
-    // Plovila: [
-    //   {
-    //     id: 1,
-    //     title: "Ask Me Anything: 10 answers to your questions about coffee",
-    //     date: "2d ago",
-    //     commentCount: 9,
-    //     shareCount: 5,
-    //   },
-    //   {
-    //     id: 2,
-    //     title: "The worst advice we've ever heard about coffee",
-    //     date: "4d ago",
-    //     commentCount: 1,
-    //     shareCount: 2,
-    //   },
-    // ],
-    // Komercijalna: [
-    //   {
-    //     id: 1,
-    //     title: "Ask Me Anything: 10 answers to your questions about coffee",
-    //     date: "2d ago",
-    //     commentCount: 9,
-    //     shareCount: 5,
-    //   },
-    //   {
-    //     id: 2,
-    //     title: "The worst advice we've ever heard about coffee",
-    //     date: "4d ago",
-    //     commentCount: 1,
-    //     shareCount: 2,
-    //   },
-    // ],
   });
 
   return (
@@ -150,7 +122,7 @@ export default function Tabovi() {
               <div className="container">
                 <div className="md:flex md:mb-5">
                   <div className="min-w-[200px] md:w-2/6 mx-1 my-1">
-                    <MultipleSelect placeholder="Brend" options={brend} />
+                    <MultipleSelect placeholder="Brend" options={brendovi} />
                   </div>
                   <div className="min-w-[200px] md:w-3/6 mx-1 my-1">
                     <MultipleSelect placeholder="Model" options={model} />
@@ -208,3 +180,5 @@ export default function Tabovi() {
     </div>
   );
 }
+
+

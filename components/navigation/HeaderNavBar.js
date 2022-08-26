@@ -3,10 +3,10 @@ import { Popover } from "@headlessui/react";
 import {
   KeyIcon,
   LoginIcon,
-  MenuIcon,
   UserIcon,
   XIcon,
 } from "@heroicons/react/outline";
+import Link from 'next/link'
 import { useDispatch, useSelector } from "react-redux";
 import { changeVisible, setVisible } from "../../store/menuOpenSlice";
 
@@ -173,24 +173,27 @@ export const HeaderNavBar = () => {
             {/* Container */}
             <div className="flex items-center space-x-4">
               {/* :::Site logo  */}
-              <div className="flex items-center">
-                {/* ::::logo  */}
-                <a
-                  href="/"
-                  className="inline-flex justify-center items-center mb-1.5 text-white"
-                >
-                  {/* <p className="font-bold text-2xl mr-2">autovana</p> */}
-                  <div
-                    className="flex flex-col justify-center items-center bg-cover bg-clip-text bg-center text-transparent text-3xl sm:text-3xl font-extrabold tracking-wide antialiased bg-white"
-                    // style={{
-                    //   backgroundImage:
-                    //     "url(https://media4.giphy.com/media/twQYPSiVdcq3s2KFyo/giphy.gif?cid=ecf05e474t4sguptmtct4esiiaus9zujaoj8af82iuavfrev&rid=giphy.gif&ct=g)",
-                    // }}
+              <Link
+              href="/"
+              >
+                <div className="flex items-center cursor-pointer">
+                  {/* ::::logo  */}
+                  <a
+                    className="inline-flex justify-center items-center mb-1.5 text-white"
                   >
-                    autovana.
-                  </div>
-                </a>
-              </div>
+                    {/* <p className="font-bold text-2xl mr-2">autovana</p> */}
+                    <div
+                      className="flex flex-col justify-center items-center bg-cover bg-clip-text bg-center text-transparent text-3xl sm:text-3xl font-extrabold tracking-wide antialiased bg-white"
+                      // style={{
+                      //   backgroundImage:
+                      //     "url(https://media4.giphy.com/media/twQYPSiVdcq3s2KFyo/giphy.gif?cid=ecf05e474t4sguptmtct4esiiaus9zujaoj8af82iuavfrev&rid=giphy.gif&ct=g)",
+                      // }}
+                    >
+                      autovana.
+                    </div>
+                  </a>
+                </div>
+              </Link>
               {/* :::Navigation */}
               <nav aria-label="navigation menu">
                 <Popover.Group className="hidden md:block">
@@ -221,9 +224,9 @@ export const HeaderNavBar = () => {
                               </Popover.Button>
                               {/* :::Flyout menu */}
                               <Popover.Panel
-                                className={`absolute top-full left-0 py-3 px-5 w-full flex justify-start shadow-sm bg-white`}
+                                className={`absolute top-full left-0 py-3 px-5 w-full flex justify-start shadow-sm bg-white/80`}
                               >
-                                <ul className="mx-auto w-full max-w-5xl flex">
+                                <ul className="mx-auto w-full max-w-5xl flex ">
                                   {category.sections.map((section, index) => (
                                     <li
                                       key={section.name}

@@ -1,10 +1,10 @@
 import React from 'react'
 import Tabovi from './navigation/Tabovi'
 
-export const HomePageSearch = () => {
+export const HomePageSearch = ({brendovi}) => {
   return (
-    <div className="hidden md:max-w-[800px] md:rounded-lg shadow-md bg-blue-300/40 p-3 md:flex md:mt-28">
-         <Tabovi /> 
+    <div className="hidden md:max-w-[800px] md:rounded-lg shadow-md bg-blue-300/40 p-3 md:flex">
+         <Tabovi props={brendovi} /> 
         </div>
   )
 }

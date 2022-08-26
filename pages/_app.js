@@ -11,10 +11,12 @@ function MyApp({ Component, pageProps }) {
     <>
       <Provider store={store}>
         <div className="md:fixed md:top-0 md:left-0 z-30 w-screen">
-          <TopHeader />
+          {/* <TopHeader /> */}
           <HeaderNavBar />
         </div>
-        <Component {...pageProps} />
+        <div className="bg-slate-200 md:mt-14">
+          <Component {...pageProps} />
+        </div>
         <BottomNav />
       </Provider>
     </>

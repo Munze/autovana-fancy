@@ -31,11 +31,11 @@ const Agencije = () => {
   );
 
   return (
-    <div className="w-full py-10 px-5 flex flex-col items-center font-body">
+    <div className="w-full mt-12 flex flex-col items-center font-body">
       {" "}
       {/* Container */}
       {/* :TITLE */}
-      <div className="mb-16 text-center text-blue-700">
+      <div className="text-center text-blue-700">
         <h1 className="uppercase font-title py-2 text-4xl font-black tracking-wider antialiased">
           6 meseci besplatno
         </h1>
@@ -46,7 +46,7 @@ const Agencije = () => {
         </p>
       </div>
       {/* :PRICING TABLES */}
-      <div className="grid grid-cols-3 gap-6 max-w-7xl">
+      <div className="grid grid-cols-3 gap-5 max-w-7xl">
         {/* ::Offer 1 */}
         <div className="col-span-3 lg:col-span-1 my-4 py-9 px-12 flex flex-col items-center bg-gray-100 text-gray-600 rounded-2xl shadow-xl">
           {/* Offer name */}
