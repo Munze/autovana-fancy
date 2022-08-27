@@ -18,7 +18,8 @@
 # misc
 .DS_Store
 *.pem
-/cardata
+*.sql
+*.zip
 
 # debug
 npm-debug.log*
