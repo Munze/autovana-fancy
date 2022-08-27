@@ -7,7 +7,7 @@ export const getStaticProps = async() => {
   const res = await fetch("https://databases.one/api/?format=json&select=make&api_key=80f5277bc597457b3992203bf")
   const brendovi = await res.json()
   const newKey={make:"label", make_id:"value"}
-  const data=renameKeys(brendovi, newKey)
+  const data=renameKeys(brendovi.result, newKey)
   return {
     props: {
       brendovi: brendovi.result
@@ -37,7 +37,6 @@ const stanje = [
 ];
 
 export default function Home({brendovi}) {
-  console.log('Brendovi: ', brendovi);
   return (
     <div className="h-screen">
       <Head>

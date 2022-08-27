@@ -54,6 +54,8 @@ function classNames(...classes) {
 }
 
 export default function Tabovi({brendovi}) {
+  console.log('Tabovi Brendovi: ', brendovi);
+
   let [categories] = useState({
     Automobili: [
       {
