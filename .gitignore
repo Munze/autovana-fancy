@@ -20,6 +20,7 @@
 *.pem
 *.sql
 *.zip
+/cardata
 
 # debug
 npm-debug.log*
