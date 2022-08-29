@@ -1,10 +1,8 @@
 import { useState } from "react";
 import { Tab } from "@headlessui/react";
 import { MultipleSelect } from "../MultipleSelect";
-import {RenameKeys} from '../utils/RenameKeys'
-
-
-
+import { MultiSelect2 } from "../MultiSelect2";
+import renameKeys from "../utils/RenameKeys";
 
 const model = [
   { label: "Ford F-Series", value: "1" },
@@ -53,8 +51,14 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Tabovi({brendovi}) {
-  console.log('Tabovi Brendovi: ', brendovi);
+export default function Tabovi({ props }) {
+  console.log("Tabovi Brendovi: ", props);
+  console.log("Tabovi Model: ", model);
+
+  const newKeys = { make: "name", make_id: "value" };
+  const brendovi = renameKeys(props, newKeys);
+
+  console.log("Renamed :", brendovi.props);
 
   let [categories] = useState({
     Automobili: [
@@ -124,9 +128,9 @@ export default function Tabovi({brendovi}) {
               <div className="container">
                 <div className="md:flex md:mb-5">
                   <div className="min-w-[200px] md:w-2/6 mx-1 my-1">
-                    <MultipleSelect placeholder="Brend" options={brendovi} />
+                    <MultiSelect2 />
                   </div>
-                  <div className="min-w-[200px] md:w-3/6 mx-1 my-1">
+                  {/* <div className="min-w-[200px] md:w-3/6 mx-1 my-1">
                     <MultipleSelect placeholder="Model" options={model} />
                   </div>
                   <div className="sm:min-w-[200px] w-[200px] md:w-1/6 mx-1 my-1">
@@ -161,7 +165,7 @@ export default function Tabovi({brendovi}) {
                       options={godina}
                       multiple={0}
                     />
-                  </div>
+                  </div> */}
                 </div>
                 <div className="md:flex mb-4 items-center">
                   <a className="w-4/12 pl-6 font-bold text-lg cursor-pointer text-blue-700 hover:text-emerald-600">
@@ -182,5 +186,3 @@ export default function Tabovi({brendovi}) {
     </div>
   );
 }
-
-

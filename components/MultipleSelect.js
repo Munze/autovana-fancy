@@ -1,27 +1,24 @@
 import React, { useState } from "react";
-import Select from 'react-tailwindcss-select';
+import { MultiSelect as Select } from "primereact/multiselect";
 
-
-
-export const MultipleSelect = ({options,placeholder, multiple}) => {
+export const MultipleSelect = ({ options, placeholder, multiple }) => {
   const [value, setValue] = useState(null);
-
+console.log(options);
   const handleChange = (value) => {
-    console.log("value:", value);
-    
     setValue(value);
   };
   return (
     <>
-    <Select
-        value={value}
-        onChange={handleChange}
-        options={options}
-        isMultiple={multiple===0 ? false : true}
-        noOptionsMessage="Nema podudaranja"
+      <Select
+        optionLabel="make"
+        optionValue="make_id"
         placeholder={placeholder}
-        searchInputPlaceholder="Pretraži..."
-    />
+        maxSelectedLabels={3}
+        display="chip"
+        value={value}
+        options={options}
+        onChange={() => handleChange(value)}
+      />
     </>
-);
+  );
 };
