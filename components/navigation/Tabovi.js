@@ -4,61 +4,21 @@ import { MultipleSelect } from "../MultipleSelect";
 import { MultiSelect2 } from "../MultiSelect2";
 import renameKeys from "../utils/RenameKeys";
 
-const model = [
-  { label: "Ford F-Series", value: "1" },
-  { label: "Golf", value: "2" },
-  { label: "Clio", value: "3" },
-  { label: "Polo", value: "4" },
-  { label: "Tiguan", value: "5", disabled: true },
-  { label: "Corsa", value: "6" },
-  { label: "208", value: "7" },
-  { label: "Qashqai", value: "8" },
-  { label: "Captur", value: "9" },
-];
-const brend = [
-  { label: "Ford F-Series", value: "1" },
-  { label: "Golf", value: "2" },
-  { label: "Clio", value: "3" },
-  { label: "Polo", value: "4" },
-  { label: "Tiguan", value: "5", disabled: true },
-  { label: "Corsa", value: "6" },
-  { label: "208", value: "7" },
-  { label: "Qashqai", value: "8" },
-  { label: "Captur", value: "9" },
-];
+
 const stanje = [
   { label: "Novo", value: "1" },
   { label: "Polovno", value: "2" },
   { label: "Oštećeno", value: "3" },
 ];
 
-const godina = [
-  { label: "2010", value: 2010 },
-  { label: "2011", value: 2011 },
-  { label: "2012", value: 2012 },
-  { label: "2013", value: 2013 },
-  { label: "2014", value: 2014 },
-  { label: "2015", value: 2015 },
-  { label: "2016", value: 2016 },
-  { label: "2017", value: 2017 },
-  { label: "2018", value: 2018 },
-  { label: "2019", value: 2019 },
-  { label: "2020", value: 2020 },
-  { label: "2021", value: 2021 },
-  { label: "2022", value: 2022 },
-];
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Tabovi({ props }) {
-  console.log("Tabovi Brendovi: ", props);
-  console.log("Tabovi Model: ", model);
-
-  const newKeys = { make: "name", make_id: "value" };
-  const brendovi = renameKeys(props, newKeys);
-
-  console.log("Renamed :", brendovi.props);
+export default function Tabovi() {
+ 
+  
 
   let [categories] = useState({
     Automobili: [
@@ -128,7 +88,7 @@ export default function Tabovi({ props }) {
               <div className="container">
                 <div className="md:flex md:mb-5">
                   <div className="min-w-[200px] md:w-2/6 mx-1 my-1">
-                    <MultiSelect2 />
+                    <MultiSelect2 options={stanje} />
                   </div>
                   {/* <div className="min-w-[200px] md:w-3/6 mx-1 my-1">
                     <MultipleSelect placeholder="Model" options={model} />

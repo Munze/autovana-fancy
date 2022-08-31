@@ -1,22 +1,8 @@
 import Head from "next/head";
 import { HomePageSearch } from "../components/HomePageSearch";
 import { CarListLayout } from "../components/layouts/CarListLayout";
-import renameKeys from "../components/utils/RenameKeys";
 
-export const getStaticProps = async() => {
-  const res = await fetch("https://databases.one/api/?format=json&select=make&api_key=80f5277bc597457b3992203bf")
-  const brendovi = await res.json()
-  const newKey={make:"label", make_id:"value"}
-  const data=renameKeys(brendovi.result, newKey)
-  return {
-    props: {
-      brendovi: brendovi.result
-    },
-    revalidate: 3600,
-  }
-  
-  
-}
+
 
 // const brend = brendovi
 const model = [
@@ -36,7 +22,7 @@ const stanje = [
   { label: "Osteceno", value: "3" },
 ];
 
-export default function Home({brendovi}) {
+export default function Home() {
   return (
     <div className="h-screen">
       <Head>
@@ -52,7 +38,7 @@ export default function Home({brendovi}) {
               "url(https://images.unsplash.com/photo-1484136540910-d66bb475348d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2153&q=80)",
           }}
         >
-          <HomePageSearch props={brendovi} />
+          <HomePageSearch  />
         </div>
         <CarListLayout />
       </div>
