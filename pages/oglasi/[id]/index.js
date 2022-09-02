@@ -46,7 +46,7 @@ export default function PostPage({ data }) {
           <h1>Oglas: {id}</h1>
           <ul>
             <li>
-              <Link href={`/oglasi/${3}`}>
+              <Link href={`/oglasi/${3}`} passHref>
                 <a>First comment</a>
               </Link>
             </li>
