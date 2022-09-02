@@ -4,10 +4,12 @@ import Breadcrumb from "../../../components/navigation/Breadcrumb";
 import { BreadcrumbItem } from "../../../components/navigation/BreadcrumbItem";
 import Image from "next/image";
 
-export default function PostPage() {
+
+
+export default function PostPage({ data }) {
   const router = useRouter();
   const id = router.query.id;
-
+  const model=data[0]
   return (
     <>
       <div className="w-full bg-white">
@@ -16,19 +18,28 @@ export default function PostPage() {
             <h1 className="">
               <Breadcrumb>
                 <BreadcrumbItem href="/">Home</BreadcrumbItem>
-                <BreadcrumbItem href="/agencije-cene">Automobili</BreadcrumbItem>
+                <BreadcrumbItem href="/agencije-cene">
+                  Automobili
+                </BreadcrumbItem>
                 <BreadcrumbItem href="/agencije-cene">Toyota</BreadcrumbItem>
                 <BreadcrumbItem href="/">Auris</BreadcrumbItem>
               </Breadcrumb>
             </h1>
           </div>
-          <div className="container flex">
-            <div className="w-4/5">Car data</div>
+          <div className="container flex mt-3">
+            <div className="w-4/5">
+              <p className="font-bold">{model.trim}</p>
+              <p className="font-bold">{model.make}</p>
+              <p className="font-bold">{model.body}</p>
+              <p className="font-bold">{model.drive}</p>
+              <p className="font-bold">{model.gearbox}</p>
+              <p className="font-bold">{model.engine_type}</p>
+            </div>
             <div className="w-1/5">
               <Image
-              src="https://3dmdb.com/t/563164.jpg"
-             height="150px"
-             width="150px"
+                src="https://3dmdb.com/t/563164.jpg"
+                height="150px"
+                width="150px"
               />
             </div>
           </div>
@@ -50,4 +61,31 @@ export default function PostPage() {
       </div>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const res = await fetch(
+    "https://databases.one/api/?format=json&select=detail&make_id=16&model_id=1895&generation_id=418&trim_id=5620&api_key=80f5277bc597457b3992203bf"
+  );
+  const data = await res.json();
+
+  return {
+    props: {
+      data: data.result,
+    },
+  };
+}
+
+export async function getStaticPaths() {
+  if (process.env.SKIP_BUILD_STATIC_GENERATION) {
+    return {
+      paths: [],
+      fallback: "blocking",
+    };
+  }
+
+  return {
+    paths: [{params:{id:'123'}}],
+    fallback: false, // can also be true or 'blocking'
+  };
 }
