@@ -12,7 +12,7 @@ export const BottomNav = () => {
     <div className="w-full h-screen ">
       <section
         id="bottom-navigation"
-        className="md:hidden block fixed inset-x-0 bottom-0 z-50 bg-white shadow mb-0.5 border-t-2 "
+        className="md:hidden block fixed inset-x-0 bottom-0 z-50 bg-white shadow border-t-2 "
       >
         <div id="tabs" className="flex justify-between items-baseline">
             {/* # Home */}

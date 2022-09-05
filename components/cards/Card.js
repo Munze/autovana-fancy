@@ -9,20 +9,21 @@ export const Card = () => {
     // href="/oglasi/1232"
     // >
       <Link href="/oglasi/123">
-        <div className="m-1 rounded-lg shadow-md hover:shadow-green-400 hover:shadow-md bg-white  cursor-pointer">
-          <div className="container">
-            <div className="shadow-sm">
+        <div className=" my-2 rounded-lg shadow-md shadow-gray-100 border border-gray-100 bg-white  cursor-pointer w-[90%] mx-auto md:w-[95%] md:my-1">
+          <div className="container ">
+            <div className="shadow-sm ">
               <Image
                 src="/img/6.webp"
                 width="100%"
                 height="75%"
                 objectFit="contain"
                 layout="responsive"
+                className="rounded-t-lg"
               />
             </div>
           </div>
           <div className="my-2 mx-1">
-            <h3 className="text-sm font-semibold text-black line-clamp-1 tracking-tight ">
+            <h3 className="text-[1.1rem] font-semibold text-gray-600 line-clamp-1 tracking-tight ">
               Toyota Auris 1,8 HSD 5-TG. EDITION45
             </h3>{" "}
           </div>

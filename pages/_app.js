@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
             {/* <TopHeader /> */}
             <HeaderNavBar />
           </div>
-          <div className="bg-slate-200 md:mt-14">
+          <div className="md:mt-14">
             <Component {...pageProps} />
           </div>
           <BottomNav />

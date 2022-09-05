@@ -37,9 +37,9 @@ export default function PostPage({ data }) {
             </div>
             <div className="w-1/5">
               <Image
-                src="https://3dmdb.com/t/563164.jpg"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOUtXQMylZWIaR8GYpusI0mg6jk_oGydNQWYIlX0vL4RSV_XYgActhlUV9ZczVrw5IZZk&usqp=CAU"
                 height="150px"
-                width="150px"
+                width="225px%"
               />
             </div>
           </div>
