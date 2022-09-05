@@ -35,7 +35,7 @@ export default function PostPage({ data }) {
               <p className="font-bold">{model.gearbox}</p>
               <p className="font-bold">{model.engine_type}</p>
             </div>
-            <div className="w-1/5">
+            <div className="w-2/5 md:w-1/5 mr-3 md:mr-0">
               <Image
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOUtXQMylZWIaR8GYpusI0mg6jk_oGydNQWYIlX0vL4RSV_XYgActhlUV9ZczVrw5IZZk&usqp=CAU"
                 height="150px"

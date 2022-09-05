@@ -28,8 +28,8 @@ export const Card = () => {
             </h3>{" "}
           </div>
           <div className="flex flex-wrap space-x-1 justify-items-end mx-2">
-            <PillSpec spec="2014" />
-            <PillSpec spec="123.450 km" />
+            <PillSpec spec="2014" type="calendar" />
+            <PillSpec spec="123.450 km" type="miles" />
           </div>
           <hr className="mx-2 my-2"/>
           <div className="grid grid-cols-1 justify-items-end">

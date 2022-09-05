@@ -61,6 +61,7 @@ export const HeaderNavBar = () => {
   
   const [activeTab, setActiveTab] = useState("automobili");
   return (
+    <>
     <div className="relative w-full">
       {/* :STORE NAVIGATION (SMALL DEVICE) */}
       <div className="md:hidden">
@@ -284,6 +285,8 @@ export const HeaderNavBar = () => {
           </div>
         </div>
       </header>
+      
     </div>
+    </>
   );
 };
