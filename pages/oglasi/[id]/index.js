@@ -27,7 +27,7 @@ export default function PostPage({ data }) {
             </h1>
           </div>
           <div className="container flex mt-3">
-            <div className="w-4/5">
+            <div className="w-3/5 md:w-4/5 grid grid-cols-1 md:grid-cols-3 md:grid-flow-row-dense">
               <p className="font-bold">{model.trim}</p>
               <p className="font-bold">{model.make}</p>
               <p className="font-bold">{model.body}</p>
