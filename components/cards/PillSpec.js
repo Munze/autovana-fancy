@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 export const PillSpec = ({ spec, type }) => {
   console.log("Ovo je:", type);
@@ -19,20 +20,12 @@ export const PillSpec = ({ spec, type }) => {
           />
         </svg>
       ) : (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="w-5 h-5"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
+        <Image 
+        src="/img/operating-mileage-16.png"
+        layout="fixed"
+        height="18px"
+        width="18px"
+        />
       )}
 
       <span className="text-xs inline-block py-1 px-1.5 leading-none text-center whitespace-nowrap align-baseline font-semibold  text-black">

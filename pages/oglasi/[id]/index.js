@@ -3,13 +3,12 @@ import Link from "next/link";
 import Breadcrumb from "../../../components/navigation/Breadcrumb";
 import { BreadcrumbItem } from "../../../components/navigation/BreadcrumbItem";
 import Image from "next/image";
-
-
+import Carusel from "../../../components/cards/Carousel";
 
 export default function PostPage({ data }) {
   const router = useRouter();
   const id = router.query.id;
-  const model=data[0]
+  const model = data[0];
   return (
     <>
       <div className="w-full bg-white">
@@ -35,7 +34,7 @@ export default function PostPage({ data }) {
               <p className="font-bold">{model.gearbox}</p>
               <p className="font-bold">{model.engine_type}</p>
             </div>
-            <div className="w-2/5 md:w-1/5 mr-3 md:mr-0">
+            <div className="w-2/5 xs:w-1/5 mr-3 xs:mr-0">
               <Image
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOUtXQMylZWIaR8GYpusI0mg6jk_oGydNQWYIlX0vL4RSV_XYgActhlUV9ZczVrw5IZZk&usqp=CAU"
                 height="150px"
@@ -43,19 +42,27 @@ export default function PostPage({ data }) {
               />
             </div>
           </div>
-          <h1>Oglas: {id}</h1>
-          <ul>
-            <li>
-              <Link href={`/oglasi/${3}`} passHref>
-                <a>First comment</a>
-              </Link>
-            </li>
-            <li>
-              <Link href={`/oglasi/${0}`}>
-                <a>Second comment</a>
-              </Link>
-            </li>
-          </ul>
+          <div className="flex mx-3 my-2">
+            <div className="w-7/12 shadow-xs">
+              <Carusel />
+            </div>
+            <div className="w-5/12 bg-gray-200 mx-2 rounded-md shadow-xs p-4 space-y-2 relative">
+              <p className="font-bold text-3xl">Kontaktirajte prodavca</p>
+              <p className="font-normal font-sans text-xl">
+                Pozovite 011-123-4567
+              </p>
+              <footer className="absolute bottom-0 pb-3 mx-2">
+              <p className="font-thin text-xs">
+                By clicking here, you authorize Cars.com and its
+                sellers/partners to contact you by text/calls which may include
+                marketing and be by autodialer. Calls may be prerecorded. You
+                also agree to our Privacy Statement. Consent is not required to
+                purchase goods/services.
+              </p>
+            </footer>
+            </div>
+            
+          </div>
           <p>Hello, I'm the {router.asPath} page</p>
         </div>
       </div>
@@ -85,7 +92,7 @@ export async function getStaticPaths() {
   }
 
   return {
-    paths: [{params:{id:'123'}}],
+    paths: [{ params: { id: "123" } }],
     fallback: false, // can also be true or 'blocking'
   };
 }
