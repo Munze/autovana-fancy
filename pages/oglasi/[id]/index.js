@@ -42,7 +42,7 @@ export default function PostPage({ data }) {
               />
             </div>
           </div>
-          <div className="flex mx-3 my-2">
+          <div className="flex mx-3 my-2 max-w-[95%]">
             <div className="w-7/12 shadow-xs">
               <Carusel />
             </div>
@@ -63,7 +63,7 @@ export default function PostPage({ data }) {
             </div>
             
           </div>
-          <p>Hello, I'm the {router.asPath} page</p>
+          
         </div>
       </div>
     </>
